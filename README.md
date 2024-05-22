@@ -1,9 +1,16 @@
 # Raven Crypto Application
+
 ## Table of Contents
+- Preview
 - Introduction
 - Features
 - Installation
 - Usage
+
+![alt raven crypto application](https://github.com/jaymeeu/raven/blob/main/chart.png?raw=true)
+
+![alt raven crypto application](https://github.com/jaymeeu/raven/blob/main/login.png?raw=true)
+
 
 ## Introduction
 This crypto application is designed to demonstrate the interactive functionality of the cryptosystem, including form handling, API requests, filtering, conditional rendering and so on. 
