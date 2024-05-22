@@ -1,0 +1,63 @@
+
+
+:root {
+  --dark-bg-color : rgba(32, 37, 43, 1);
+  --darker-bg-color : rgba(28, 33, 39, 1);
+  --darkest-bg-color : rgba(18, 23, 29, 1);
+
+  --light-color : rgba(167, 177, 188, 1);
+  --lightest-color : rgba(255, 255, 255, 1);
+
+  --gray-bg-color : rgba(53, 57, 69, 1);
+  --warm-color : rgba(255, 104, 56, 1);
+  --cold-color : rgba(37, 194, 110, 1);
+  --blue-color : rgba(39, 100, 255, 1);
+  --gradient-color : linear-gradient(90deg, #483BEB 0%, #7847E1 47.92%, #DD568D 96.35%);
+
+  --border-color :  rgba(50, 56, 63, 1);
+  --border-ligher-color :  rgba(38, 41, 50, 1);
+  
+  --warm-bg-color : rgba(66, 47, 45, 1);
+  --cold-bg-color : rgba(33, 62, 53, 1);
+
+  --padding-lg : 24px;
+  --padding-md : 16px;
+  --padding-sm : 12px;
+  --padding-xs : 8px;
+
+  --rounded-lg : 24px;
+  --rounded-md : 16px;
+  --rounded-sm : 12px;
+  --rounded-xs : 8px;
+
+  --gap-lg : 24px;
+  --gap-md : 16px;
+  --gap-sm : 12px;
+  --gap-xs : 8px;
+
+}
+
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--darker-bg-color);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Satoshi', sans-serif;
+}
+
+.shadow__card {
+  padding: var(--padding-md);
+    background-color: var(--dark-bg-color);
+    border-radius: var(--rounded-xs);
+    border: 1px solid var(--border-ligher-color);
+}
+.shadow__cardV2 {
+    background-color: var(--dark-bg-color);
+    border-radius: var(--rounded-xs);
+    border: 1px solid var(--border-ligher-color);
+}

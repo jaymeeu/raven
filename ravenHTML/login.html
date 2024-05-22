@@ -1,0 +1,49 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,500,501,700&display=swap" rel="stylesheet">
+   
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <div class="login__container">
+        <!-- <h1>Authentication Screen</h1> -->
+        <form id="authForm" class="authForm">
+            <div class="title_login">
+                Sign In
+            </div>
+            <div class='input__container'>
+                <input id="email" required placeholder="Email address" type='email' class="input__input"
+                    style="text-align: left;" />
+            </div>
+            <button type="submit" class='btn__container'>
+                Login
+            </button>
+
+
+            <div id="result" class="hidden">
+                <div id="gravatar" class="toCenter">
+                    <h2>Gravatar</h2>
+                    <img id="gravatarImage" alt="Gravatar" class="gravatarImage">
+                </div>
+                <div id="github" class="githubList">
+                    <h2>GitHub Repositories</h2>
+                    <ul id="reposList"></ul>
+                </div>
+            </div>
+
+        </form>
+       
+    </div>
+
+    <script src="scripts/gravatar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+</body>
+
+</html>

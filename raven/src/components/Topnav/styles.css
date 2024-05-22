@@ -1,0 +1,129 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--padding-sm) var(--padding-md);
+    background-color: var(--darker-bg-color);
+    border-bottom: 1px solid var(--border-color);
+}
+.header__right{
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+.header__logo{
+    width: 121px;
+    height: 34px;
+    cursor: pointer;
+    user-select: none;
+}
+.header__links{
+    display: flex;
+    border-left: 1px solid var(--border-color) ;
+    padding: var(--padding-sm);
+    padding-left: 48px;
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+.header__links--active{
+    color: var(--lightest-color);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.header__links--inactive{
+    color: var(--light-color);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+.header__left{
+    display: flex;
+    align-items: center;
+    gap: var(--gap-md);
+}
+.header__left--mobile{
+    display: none 
+}
+.header__left--profile{
+    padding: var(--padding-xs) var(--padding-sm);
+    border-radius: var(--rounded-sm);
+    background-color: var(--darkest-bg-color);
+    display: flex;
+    gap: var(--gap-xs);
+    color: var(--light-color);
+    align-items: center;
+}
+.header__left--profile span{
+    color: var(--light-color);
+    font-size: 14px !important;
+    cursor: pointer;
+}
+
+.header__left span{
+    color: var(--light-color);
+    font-size: 24px;
+    cursor: pointer;
+    
+}
+
+.navbar__toggler {
+    /* display: none; */
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.mobile__sidebar{
+    display: none;
+}
+
+
+
+@media (max-width: 768px) {
+    .header__left{
+        display: none;
+    }
+    .header__left--mobile{
+        display: flex;
+        align-items: center;
+        gap: var(--gap-md); 
+    }
+    .header__links{
+        display: none;
+    }
+    .mobile__sidebar {
+        display: block;
+        position: fixed;
+        z-index: 50;
+        top: 0;
+        right: -250px; /* Hidden off the screen */
+        height: 100%;
+        width: 250px;
+        background-color: var(--darker-bg-color);
+        border-left: 1px solid var(--border-color);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: right 0.3s ease-in-out;
+
+    }
+    .close__btn{
+      margin-top: 20px;
+      margin-left: 20px;  
+    }
+    .flex__sidebar{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        padding-top: 40px;
+    }
+    .mobile__sidebar.active {
+        right: 0; /* Slide in effect */
+    }
+    
+}

@@ -1,0 +1,630 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raven</title>
+
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/navbar.css">
+    <link rel="stylesheet" href="styles/price.css">
+    <link rel="stylesheet" href="styles/chart.css">
+    <link rel="stylesheet" href="styles/orderArea.css">
+    <link rel="stylesheet" href="styles/buyingArea.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,301,400,500,501,700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://kit.fontawesome.com/4b0f356679.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div>
+        <!-- navigation bar begins here -->
+        <div class='header'>
+            <div class="header__right">
+                <img class="header__logo" src="assets/logo.svg" />
+                <div class="header__links">
+                    <a href='#' class="header__links--active">
+                        Dashboard
+                    </a>
+                    <a href='#' class="header__links--inactive">
+                        Markets
+                    </a>
+                    <a href='#' class="header__links--inactive">
+                        Wallet
+                    </a>
+                </div>
+            </div>
+
+            <div class='price__selector'>
+                <div class="coin__selector" id="coin__selector2">
+                    <input placeholder="Search"  type="search" class="dropdown__search_top"></input>
+                </div>
+                
+
+                <div class="coin__dropdown" id="coin__dropdown">
+                    <div class="dropdown__container">
+                        <div class="dropdown__title">
+                            Select Market
+                        </div>
+                        <input placeholder="Search" id="search-coin-input" type="search" class="dropdown__search"></input>
+                        <div class="dropdown__filter">
+                                <div class="dropdown__filter--option">All</div>
+                                <div class="dropdown__filter--option">USD</div>
+                                <div class="dropdown__filter--option">BTC</div>
+                        </div>
+                        <div class="options__container" id="coin-list">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header__left">
+                <div class="header__left--profile">
+                    <img src="assets/avatar.svg" />
+                    <span>Olakunle Te...</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <i class="fa-solid fa-globe"></i>
+                <a  href="./login.html"><i  class="fa-solid fa-arrow-right-from-bracket"></i></a>
+            </div>
+            <div class="header__left--mobile">
+                <img src="assets/avatar.svg" />
+                <span>
+                    <i class="fa-solid fa-globe"></i>
+                </span>
+                <button class="navbar__toggler" id="navbar-toggler">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+            <div class="mobile__sidebar" id='mobile__sidebar'>
+                <div class="close__btn" id='navbar-close'>
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class='flex__sidebar'>
+                    <a href='#' class="header__links--active">
+                        Dashboard
+                    </a>
+                    <a href='#' class="header__links--inactive">
+                        Markets
+                    </a>
+                    <a href='#' class="header__links--inactive">
+                        Wallet
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- navigation bar ends here -->
+
+        <!-- content start here -->
+        <div class="container">
+            <div class='pricing__container shadow__card'>
+                <div class='price__selector'>
+                    <div class="coin__selector" id="coin__selector">
+                        <img src="assets/BTC.svg" class="selector__image" />
+                        <div class="selector__title" id="selector__title">BTC/USDT</div>
+                        <i class="fa-solid fa-chevron-down"></i>
+                        <div class="selector__price" id="selector__price">
+                            $20,634
+                        </div>
+                    </div>
+                    
+
+                    <div class="coin__dropdown" id="coin__dropdown">
+                        <div class="dropdown__container">
+                            <div class="dropdown__title">
+                                Select Market
+                            </div>
+                            <input placeholder="Search" id="search-coin-input" type="search" class="dropdown__search"></input>
+                            <div class="dropdown__filter">
+                                    <div class="dropdown__filter--option">All</div>
+                                    <div class="dropdown__filter--option">USD</div>
+                                    <div class="dropdown__filter--option">BTC</div>
+                            </div>
+                            <div class="options__container" id="coin-list">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='pricing__scrollable'>
+                    <div class='price__card'>
+                        <div class='price__duration'>
+                            <i class="fa-solid fa-circle-info"></i>
+                            <div>24h Change</div>
+                        </div>
+                        <div class="price__text--green">
+                            <span>520.80</span>
+                            <span>+1.25%</span>
+                        </div>
+                    </div>
+                    <div class='price__card'>
+                        <div class='price__duration'>
+                            <i class="fa-solid fa-arrow-up-long"></i>
+                            <div>24h High</div>
+                        </div>
+                        <div class="price__text">
+                            <span>520.80</span>
+                            <span>+1.25%</span>
+                        </div>
+                    </div>
+
+                    <div class='price__card'>
+                        <div class='price__duration'>
+                            <i class="fa-solid fa-arrow-down-long"></i>
+                            <div>24h Low</div>
+                        </div>
+                        <div class="price__text">
+                            <span>520.80</span>
+                            <span>+1.25%</span>
+                        </div>
+                    </div>
+
+                    <div class='price__card'>
+                        <div class='price__duration'>
+                            <i class="fa-solid fa-chart-column"></i>
+                            <div>24h Volumn</div>
+                        </div>
+                        <div class="price__text">
+                            <span>520.80</span>
+                            <span>+1.25%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class='content__section'>
+                <div class="chart__section shadow__cardV2">
+                    <div>
+                        <div class='chart__filters'>
+                            <div class="chart__filter">
+                                <div class="text__buttons">
+                                    <div style="font-size: 14px; color: var(--light-color); margin-right: 20px;">
+                                        Time
+                                    </div>
+                                    <div class="text__btn" onclick="onChangeDuration('1H')">1H</div>
+                                    <div class="text__btn" onclick="onChangeDuration('2H')">2H</div>
+                                    <div class="text__btn" onclick="onChangeDuration('4H')">4H</div>
+                                    <div class="text__btn" onclick="onChangeDuration('1D')">1D</div>
+                                    <div class="text__btn" onclick="onChangeDuration('1W')">1W</div>
+                                    <div class="text__btn" onclick="onChangeDuration('1M')">1M</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="trend__info">
+                            <div class="trend__text">
+                                <div class="trend__span" id="trend__span">
+                                    BTC/USDT
+                                </div>
+                            </div>
+                            <div class="trend__text">
+                                <div class="trend__span">O</div>
+                                <div class="trend__span--cold" id="openTrend">0</div>
+                            </div>
+                            <div class="trend__text">
+                                <div class="trend__span">H</div>
+                                <div class="trend__span--cold" id="highTrend">0</div>
+                            </div>
+                            <div class="trend__text">
+                                <div class="trend__span">L</div>
+                                <div class="trend__span--cold" id="lowTrend">0</div>
+                            </div>
+                            <div class="trend__text">
+                                <div class="trend__span">C</div>
+                                <div class="trend__span--cold" id="closeTrend">0</div>
+                            </div>
+                            <div class="trend__text">
+                                <div class="trend__span">Change</div>
+                                <div class="trend__span--cold" id="changeTrend">0%</div>
+                            </div>
+                            <div class="trend__text">
+                                <div class="trend__span">Amplitude</div>
+                                <div class="trend__span--cold" id="amplitudeTrend">0%</div>
+                            </div>
+                        </div>
+                        <div id="chart"></div>
+                    </div>
+                </div>
+                <div class="order__section shadow__card">
+                    <div class='order__container'>
+                        <div class="toggle__container">
+                            <div onclick="onChangeOrder('order book')" class="toggle__btn">Order Book</div>
+                            <div onclick="onChangeOrder('recent trades')" class="toggle__btn">Recent trades</div>
+                        </div>
+                        <div class="icon__actions">
+                            <div class="icon__buttons">
+                                <div onclick="onSelect('all')" class="icon__btn">
+                                    <img src="./assets//icons/icon1.svg" />
+                                </div>
+                                <div onclick="onSelect('top')" class="icon__btn">
+                                    <img src="./assets/icons/icon2.svg" />
+                                </div>
+                                <div onclick="onSelect('bottom')" class="icon__btn">
+                                    <img src="./assets/icons/icon3.svg" />
+                                </div>
+                            </div>
+                            <div class="action__selector">
+                                <span>10</span>
+                                <IoChevronDown class='action__chevron' />
+                            </div>
+                        </div>
+                        <div>
+                            <div class="negative__tablehead">
+                                <div class="tablehead__cells">
+                                    <div class='tablehead__cell'>
+                                        <span>Price</span>
+                                        <span class='tablehead__cell--span'>(USDT)</span>
+                                    </div>
+                                    <div class='tablehead__cell'>
+                                        <span>Amount</span>
+                                        <span class='tablehead__cell--span'>(BTC)</span>
+                                    </div>
+                                    <div class='tablehead__cell'>
+                                        <span>Total</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class='negative__table'>
+                                <div class='negative_tablebody'>
+                                    <div class="table__cells"
+                                        style="background:linear-gradient(to right,transparent 20%, var(--warm-bg-color) 80%)">
+                                        <div class="table__cell--warm">
+                                            <span>2920.00</span>
+                                        </div>
+                                        <div class='table__cell--amount'>
+                                            <span>0.2718</span>
+                                        </div>
+                                        <div class='table__cell--amount'>
+                                            <span>9192</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="table__cells"
+                                        style="background:linear-gradient(to right,transparent 60%, var(--warm-bg-color) 40%)">
+                                        <div class="table__cell--warm">
+                                            <span>2920.00</span>
+                                        </div>
+                                        <div class='table__cell--amount'>
+                                            <span>0.2718</span>
+                                        </div>
+                                        <div class='table__cell--amount'>
+                                            <span>9192</span>
+                                        </div>
+                                    </div>
+                                    <div class="table__cells"
+                                        style="background:linear-gradient(to right,transparent 50%, var(--warm-bg-color) 50%)">
+                                        <div class="table__cell--warm">
+                                            <span>2920.00</span>
+                                        </div>
+                                        <div class='table__cell--amount'>
+                                            <span>0.2718</span>
+                                        </div>
+                                        <div class='table__cell--amount'>
+                                            <span>9192</span>
+                                        </div>
+                                    </div>
+                                    <div class="table__cells"
+                                        style="background:linear-gradient(to right,transparent 0%, var(--warm-bg-color) 100%)">
+                                        <div class="table__cell--warm">
+                                            <span>2920.00</span>
+                                        </div>
+                                        <div class='table__cell--amount'>
+                                            <span>0.2718</span>
+                                        </div>
+                                        <div class='table__cell--amount'>
+                                            <span>9192</span>
+                                        </div>
+                                    </div>
+                                    <div class="table__cells"
+                                        style="background:linear-gradient(to right,transparent 20%, var(--warm-bg-color) 80%)">
+                                        <div class="table__cell--warm">
+                                            <span>2920.00</span>
+                                        </div>
+                                        <div class='table__cell--amount'>
+                                            <span>0.2718</span>
+                                        </div>
+                                        <div class='table__cell--amount'>
+                                            <span>9192</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class='table__prices'>
+                                <span class='table__price'>36,641.20</span>
+                                <i class="fa-solid fa-arrow-up-long"></i>
+                                <span class='table__price--white'>36,641.20</span>
+                            </div>
+
+                            <div class='negative__table'>
+                                <div class='negative_tablebody'>
+                                    <div class="table__cells"
+                                    style="background:linear-gradient(to right,transparent 20%, var(--cold-bg-color) 80%)">
+                                    <div class="table__cell--cold">
+                                        <span>2920.00</span>
+                                    </div>
+                                    <div class='table__cell--amount'>
+                                        <span>0.2718</span>
+                                    </div>
+                                    <div class='table__cell--amount'>
+                                        <span>9192</span>
+                                    </div>
+                                </div>
+
+                                <div class="table__cells"
+                                    style="background:linear-gradient(to right,transparent 60%, var(--cold-bg-color) 40%)">
+                                    <div class="table__cell--cold">
+                                        <span>2920.00</span>
+                                    </div>
+                                    <div class='table__cell--amount'>
+                                        <span>0.2718</span>
+                                    </div>
+                                    <div class='table__cell--amount'>
+                                        <span>9192</span>
+                                    </div>
+                                </div>
+                                <div class="table__cells"
+                                    style="background:linear-gradient(to right,transparent 50%, var(--cold-bg-color) 50%)">
+                                    <div class="table__cell--cold">
+                                        <span>2920.00</span>
+                                    </div>
+                                    <div class='table__cell--amount'>
+                                        <span>0.2718</span>
+                                    </div>
+                                    <div class='table__cell--amount'>
+                                        <span>9192</span>
+                                    </div>
+                                </div>
+                                <div class="table__cells"
+                                    style="background:linear-gradient(to right,transparent 0%, var(--cold-bg-color) 100%)">
+                                    <div class="table__cell--cold">
+                                        <span>2920.00</span>
+                                    </div>
+                                    <div class='table__cell--amount'>
+                                        <span>0.2718</span>
+                                    </div>
+                                    <div class='table__cell--amount'>
+                                        <span>9192</span>
+                                    </div>
+                                </div>
+                                <div class="table__cells"
+                                    style="background:linear-gradient(to right,transparent 20%, var(--cold-bg-color) 80%)">
+                                    <div class="table__cell--cold">
+                                        <span>2920.00</span>
+                                    </div>
+                                    <div class='table__cell--amount'>
+                                        <span>0.2718</span>
+                                    </div>
+                                    <div class='table__cell--amount'>
+                                        <span>9192</span>
+                                    </div>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div onclick="onChangeOrder('order book')" class="toggle__btn">Order Book</div> -->
+
+                <div class="buying__section shadow__card">
+                    <div class='buying__container'>
+                        <div class="toggle__actions">
+                            <div
+                                onclick="onSelectTransact('buy')"
+                                class="toggle__action  active__buy">
+                                Buy
+                            </div>
+                            <div
+                            onclick="onSelectTransact('sell')"
+                            class="toggle__action  active__sell">
+                                Sell
+                            </div>
+                        </div>
+
+                        <div class="text__actions">
+                            <div class="text__buttons">
+                                <div class="text__btn--v2"  onclick="onSelectBuyType('limit')">Limit</div>
+                                <div class="text__btn--v2" onclick="onSelectBuyType('market')">Market</div>
+                                <div class="text__btn--v2"  onclick="onSelectBuyType('stop-limit')">Stop-Limit</div>
+                            </div>
+                        </div>
+
+                        <form id="limit-form" class='form__container' style="display: flex;">
+                            <div class='input__container' >
+                                <div class="input__label">
+                                    <span>Limit price</span>
+                                    <i class="fa-solid fa-circle-info"></i>
+                                </div>
+                                <input required  placeholder="0.00 USD" type='text' class="input__input"/>
+                            </div>
+
+                            <div class='input__container' >
+                                <div class="input__label">
+                                    <span>Amount</span>
+                                    <i class="fa-solid fa-circle-info"></i>
+                                </div>
+                                <input required  placeholder="0.00 USD" type='text' class="input__input"/>
+                            </div>
+                            <div class='input__container' >
+                                <div class="input__label">
+                                    <span>Good</span>
+                                    <i class="fa-solid fa-circle-info"></i>
+                                </div>
+                                <input required  placeholder="0.00 USD" type='text' class="input__input"/>
+                            </div>
+                            <div class="total__text"><span>Total</span><span>0.00</span></div>
+
+                            <button type="submit" class='btn__container'>
+                                Buy BTC
+                              </button>
+
+                              <div class='deposit__container'>
+                                <div class='custom__label'>
+                                    <div class="custom__label--text">
+                                        Total account value
+                                    </div>
+                                    <div class="custom__label--value">
+                                        0.00
+                                    </div>
+                                </div>
+                                <div class="flex__form">
+                                <div class='custom__label'>
+                                    <div class="custom__label--text">
+                                        Open Orders
+                                    </div>
+                                    <div class="custom__label--value">
+                                        0.00
+                                    </div>
+                                </div>
+                                <div class='custom__label' style="align-items: end;" >
+                                    <div class="custom__label--text">
+                                        Available
+                                    </div>
+                                    <div class="custom__label--value">
+                                        0.00
+                                    </div>
+                                </div>
+                                
+                                </div>
+                    
+                                <button type="submit" class="btn__primary">
+                                    Deposit
+                                </button>
+                            </div>
+
+                        </form>
+                        <form id="market-form" class='form__container'>
+                            <div class='input__container' >
+                                <div class="input__label">
+                                    <span>Amount</span>
+                                    <i class="fa-solid fa-circle-info"></i>
+                                </div>
+                                <input required  placeholder="0.00 USD" type='text' class="input__input"/>
+                            </div>
+                            <div class="total__text"><span>Total</span><span>0.00</span></div>
+
+                            <button type="submit" class='btn__container'>
+                                Buy BTC
+                              </button>
+
+                              <div class='deposit__container'>
+                                <div class='custom__label'>
+                                    <div class="custom__label--text">
+                                        Total account value
+                                    </div>
+                                    <div class="custom__label--value">
+                                        0.00
+                                    </div>
+                                </div>
+                                <div class="flex__form">
+                                <div class='custom__label'>
+                                    <div class="custom__label--text">
+                                        Open Orders
+                                    </div>
+                                    <div class="custom__label--value">
+                                        0.00
+                                    </div>
+                                </div>
+                                <div class='custom__label' style="align-items: end;" >
+                                    <div class="custom__label--text">
+                                        Available
+                                    </div>
+                                    <div class="custom__label--value">
+                                        0.00
+                                    </div>
+                                </div>
+                                
+                                </div>
+                    
+                                <button type="submit" class="btn__primary">
+                                    Deposit
+                                </button>
+                            </div>
+                        </form>
+                        <form id="stop-form" class='form__container'>
+                            <div class='input__container' >
+                                <div class="input__label">
+                                    <span>Trigger price</span>
+                                    <i class="fa-solid fa-circle-info"></i>
+                                </div>
+                                <input  placeholder="0.00 USD" type='text' class="input__input"/>
+                            </div>
+
+                            <div class='input__container' >
+                                <div class="input__label">
+                                    <span>Limit price</span>
+                                    <i class="fa-solid fa-circle-info"></i>
+                                </div>
+                                <input required  placeholder="0.00 USD" type='text' class="input__input"/>
+                            </div>
+
+                            <div class='input__container' >
+                                <div class="input__label">
+                                    <span>Amount</span>
+                                    <i class="fa-solid fa-circle-info"></i>
+                                </div>
+                                <input required  placeholder="0.00 USD" type='text' class="input__input"/>
+                            </div>
+                            <div class='input__container' >
+                                <div class="input__label">
+                                    <span>Type</span>
+                                    <i class="fa-solid fa-circle-info"></i>
+                                </div>
+                                <input required  placeholder="0.00 USD" type='text' class="input__input"/>
+                            </div>
+
+                            <div class="total__text"><span>Total</span><span>0.00</span></div>
+
+                            <button type="submit" class='btn__container'>
+                                Buy BTC
+                              </button>
+
+                              <div class='deposit__container'>
+                                <div class='custom__label'>
+                                    <div class="custom__label--text">
+                                        Total account value
+                                    </div>
+                                    <div class="custom__label--value">
+                                        0.00
+                                    </div>
+                                </div>
+                                <div class="flex__form">
+                                <div class='custom__label'>
+                                    <div class="custom__label--text">
+                                        Open Orders
+                                    </div>
+                                    <div class="custom__label--value">
+                                        0.00
+                                    </div>
+                                </div>
+                                <div class='custom__label' style="align-items: end;" >
+                                    <div class="custom__label--text">
+                                        Available
+                                    </div>
+                                    <div class="custom__label--value">
+                                        0.00
+                                    </div>
+                                </div>
+                                
+                                </div>
+                    
+                                <button type="submit" class="btn__primary">
+                                    Deposit
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- content ends here -->
+        </div>
+    <script src="scripts/buyingArea.js"></script>
+        
+        <script src="scripts/script.js"></script>
+        <script src="scripts/orderArea.js"></script>
+        <script src="scripts/chartArea.js"></script>
+
+</body>
+
+</html>

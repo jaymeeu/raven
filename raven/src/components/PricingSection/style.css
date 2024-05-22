@@ -1,0 +1,21 @@
+.pricing__container{
+    display: flex;
+    align-items: center;
+}
+.pricing__scrollable{
+    width: 100%;
+    overflow: scroll;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    
+}
+
+
+@media only screen and (max-width : 768px){
+    .pricing__container{
+        flex-direction: column;
+        gap: 20px;
+        align-items: start;
+    }
+}

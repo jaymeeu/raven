@@ -1,0 +1,85 @@
+.negative__table{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+.negative__tablehead{
+    display: flex;
+    width: 100%;
+    padding: 0 4px;
+
+}
+.tablehead__cells{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.tablehead__cell{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    color: var(--light-color);
+    font-size: 12px;
+    font-weight: 500;
+}
+.tablehead__cell--span{
+    font-size: 9px;
+}
+
+.negative_tablebody{
+    margin-top: 8px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: var(--gap-xs);
+}
+.table__cells{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 4px 8px;
+
+}
+.table__cell{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    font-weight: 500;
+}
+.table__cell--warm{
+    color: var(--warm-color);
+    font-size: 12px;
+
+}
+
+.table__cell--cold{
+    color: var(--cold-color);
+    font-size: 12px;
+
+}
+
+.table__cell--amount{
+    color: var(--lightest-color);
+    font-size: 12px;
+
+}
+
+.table__prices{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--gap-md);
+    gap: var(--gap-sm);
+}
+.table__price{
+    font-size: 16px;
+    color: var(--cold-color);
+    font-weight: 500;
+}
+
+.table__price--white{
+    font-size: 16px;
+    color: var(--lightest-color);
+    font-weight: 500;
+}

@@ -1,0 +1,170 @@
+.chart__filters{
+    padding: var(--padding-sm);
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chart__filter{
+    display: flex;
+    gap: var(--gap-lg);
+    width: 100%;
+    overflow: scroll;
+}
+
+.trend__info{
+    display: flex;
+    align-items: center;
+    gap: var(--gap-lg); 
+    padding: var(--padding-md);
+    padding-bottom: 0;
+    width: 100%;
+    overflow: scroll;
+    margin-bottom: 20px;
+}
+.trend__text{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.trend__span{
+    font-size: 12px;
+    color: var(--light-color);
+}
+.trend__span--cold{
+    font-size: 12px;
+    color: var(--cold-color);
+}
+.toggle__actions{
+    width: 100%;
+    border-radius: var(--rounded-sm);
+    padding: 2px;
+    background-color: var(--darkest-bg-color);
+    display: flex;
+    align-items: center;
+}
+.toggle__action{
+    width: 50%;
+    border-radius: var(--rounded-sm);
+    padding: var(--padding-xs);
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 12px;
+    color: var(--light-color);
+
+}
+.toggle__action.active{
+    color: var(--lightest-color);
+    background-color: var(--dark-bg-color);
+    border: 1px solid var(--warm-color)
+
+
+}
+.toggle__action.active__sell{
+    /* border: 1px solid var(--warm-color) */
+}
+.toggle__action.active__buy{
+    /* border: 1px solid var(--cold-color) */
+}
+.toggle__action.inactive{
+    background-color: transparent;
+
+}
+
+.icon__btn{
+    border-radius: 4px;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+.icon__btn:hover{
+    background-color: var(--gray-bg-color);
+}
+
+.icon__btn.active{
+    background-color: var(--gray-bg-color);
+}
+
+.icon__btn.inactive{
+    background-color:transparent
+}
+
+.action__selector{
+    background-color: var(--gray-bg-color);
+    display: flex;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 32px;
+    gap: var(--gap-sm);
+    align-items: center;
+    color: var(--lightest-color);
+    font-size: 12px;
+    padding: var(--padding-sm);
+}
+.action__chevron{
+    color: var(--light-color);
+    font-size: 14px;
+}
+
+.icon__actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.icon__buttons{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+
+.text__buttons{
+    display: flex;
+    align-items: center;
+    overflow: scroll;
+    width: 100%;
+    color: var(--lightest-color);
+
+}
+
+.text__btn{
+    border-radius: 16px;
+    cursor: pointer;
+    /* width: 32px; */
+    height: 32px;
+    padding: 0 var(--padding-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+.text__btn:hover{
+    background-color: var(--gray-bg-color);
+    color: var(--lightest-color);
+}
+
+.text__btn.active{
+    background-color: var(--gray-bg-color);
+    color: var(--lightest-color);
+    font-weight: 500;
+}
+
+.text__btn.inactive{
+    background-color:transparent;
+    color: var(--light-color);
+
+}
+.buying__container{
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-sm);
+}

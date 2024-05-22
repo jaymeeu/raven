@@ -1,0 +1,36 @@
+.content__section{
+    display: flex;
+    gap: var(--gap-xs);
+
+}
+.order__section, .buying__section{
+    padding: var(--padding-xs) !important ;
+}
+
+.chart__section{
+    flex: 1;
+}
+
+.order__section{
+width: 245px;
+}
+.buying__section{
+width: 255px;
+}
+
+@media (max-width : 768px){
+    .content__section{
+        flex-direction: column;
+    }
+    
+    .dropdown__search_top{
+        display: none;
+    }
+
+    .order__section{
+        width: 100%;
+        }
+        .buying__section{
+        width: 100%;
+        }
+}
