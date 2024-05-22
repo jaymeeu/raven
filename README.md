@@ -1,20 +1,25 @@
 # Raven Crypto Application
 
 ## Table of Contents
-- Preview
 - Introduction
+- Preview
 - Features
 - Installation
 - Usage
+
+## Introduction
+This crypto application is designed to demonstrate the interactive functionality of the cryptosystem, including form handling, API requests, filtering, conditional rendering and so on. 
+It also fetches and displays Gravatar images and lists GitHub repositories based on the provided email address.
+
+
+## Live preview 
+Here is the link to the deployed application: https://raven-phi.vercel.app/
 
 ![alt raven crypto application](https://github.com/jaymeeu/raven/blob/main/chart.png?raw=true)
 
 ![alt raven crypto application](https://github.com/jaymeeu/raven/blob/main/login.png?raw=true)
 
 
-## Introduction
-This crypto application is designed to demonstrate the interactive functionality of the cryptosystem, including form handling, API requests, filtering, conditional rendering and so on. 
-It also fetches and displays Gravatar images and lists GitHub repositories based on the provided email address.
 
 ## Features
 - Fetch coin trend
