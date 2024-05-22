@@ -3,6 +3,7 @@ import './style.css'
 import ReactApexChart from 'react-apexcharts';
 import DurationToggle from './DurationToggle';
 import { useSearchParams } from 'react-router-dom';
+import Loading from '@/components/Loading';
 
 
 const Index = () => {
@@ -12,6 +13,7 @@ const Index = () => {
   const duration = searchParams.get("duration")
   const symbol = searchParams.get("symbol")
 
+  const [loading, setLoading] = useState(false)
   useEffect(() => {
     fetchCandlestickData(
         duration ? duration.toLowerCase() : "1h", 
@@ -29,6 +31,8 @@ const Index = () => {
  
 
   async function fetchCandlestickData(interval, symbol) {
+    setLoading(true)
+
     try {
         const response = await fetch(`https://api.binance.com/api/v3/klines?symbol=${symbol}&interval=${interval}`);
         const data = await response.json();
@@ -51,14 +55,17 @@ const Index = () => {
           change :  changePercentage,
           amplitude : amplitudePercentage
         })
-       
         setChartData(data.map(entry => ({
             x: new Date(entry[0]),
             y: [parseFloat(entry[1]), parseFloat(entry[2]), parseFloat(entry[3]), parseFloat(entry[4])]
         }))
       );
+      setLoading(false)
+
     } catch (error) {
         console.error('Error fetching candlestick data:', error);
+       setLoading(false)
+
     }
   }
 
@@ -155,6 +162,10 @@ const Index = () => {
         type="candlestick"
         height={450}
       />
+
+      {
+        loading && <Loading/>
+      }
     </div>
   )
 }
