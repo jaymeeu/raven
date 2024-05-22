@@ -3,14 +3,16 @@ import CustomBtn from '@/components/CustomInput/CustomBtn'
 import SelectInput from '@/components/CustomInput/SelectInput'
 import React, { useState } from 'react'
 
-const LimitForm = () => {
+const StopForm = () => {
 
   const [amount, setAmount] = useState()
+  const [trigger, setTrigger] = useState()
   const [price, setPrice] = useState()
   const [good, setGood] = useState()
 
   return (
     <div className='form__container'>
+      <CustomInput placeholder={'0.00 USD'} label={"Trigger price"} value={trigger} setValue={setTrigger} />
       <CustomInput placeholder={'0.00 USD'} label={"Limit price"} value={price} setValue={setPrice} />
       <CustomInput placeholder={'0.00 USD'} label={"Amount"} value={amount} setValue={setAmount} />
       <CustomInput placeholder={'Good till cancelled'} label={"Type"} value={good} setValue={setGood} />
@@ -20,4 +22,4 @@ const LimitForm = () => {
   )
 }
 
-export default LimitForm
+export default StopForm
